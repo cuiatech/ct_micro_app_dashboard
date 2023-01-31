@@ -49,17 +49,17 @@ class CuiaAppBar extends StatelessWidget implements PreferredSizeWidget {
           Row(
             children: [
               InkWell(
-                onTap: () {},
-                child: const CircleAvatar(
-                  child: Text("A"),
-                ),
-              ),
-              const SizedBox(width: 20),
-              InkWell(
                 onTap: () {
                   Scaffold.of(context).openEndDrawer();
                 },
                 child: CuiaIcons.support(white: true, size: 28),
+              ),
+              const SizedBox(width: 20),
+              InkWell(
+                onTap: () {},
+                child: const CircleAvatar(
+                  child: Text("RP"),
+                ),
               ),
             ],
           )

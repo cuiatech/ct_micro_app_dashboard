@@ -14,7 +14,7 @@ class DashboardModule extends Module {
   final List<ModularRoute> routes = [
     ChildRoute(
       '/',
-      child: (_, args) => HomePage(),
+      child: (_, args) => const HomePage(),
       transition: TransitionType.noTransition,
     ),
   ];

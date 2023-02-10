@@ -12,6 +12,16 @@ dependencies:
     sdk: flutter
 
 dependency_overrides:
+  flut_micro_app_help_center:
+    path: ../flut_micro_app_help_center
+    # git:
+    #   url: "https://github.com/cuiatech/flut_micro_app_help_center.git"
+    #   ref: "master"
+  flut_micro_app_marketplace:
+    path: ../flut_micro_app_marketplace
+    # git:
+    #   url: "https://github.com/cuiatech/flut_micro_app_marketplace.git"
+    #   ref: "master"
   flut_micro_commons_dependencies:
     path: ../flut_micro_commons_dependencies
     # git:
@@ -31,11 +41,6 @@ dependency_overrides:
     path: ../flut_micro_commons_auth
     # git:
     #   url: "https://github.com/cuiatech/flut_micro_commons_auth.git"
-    #   ref: "master"
-  flut_micro_app_help_center:
-    path: ../flut_micro_app_help_center
-    # git:
-    #   url: "https://github.com/cuiatech/flut_micro_app_help_center.git"
     #   ref: "master"
 
 dev_dependencies:

@@ -42,6 +42,11 @@ dependency_overrides:
     # git:
     #   url: "https://github.com/cuiatech/flut_micro_commons_auth.git"
     #   ref: "master"
+  flut_micro_commons_core_app:
+    path: ../flut_micro_commons_core_app
+    # git:
+    #   url: "https://github.com/cuiatech/flut_micro_commons_core_app.git"
+    #   ref: "master"
 
 dev_dependencies:
   flutter_test:

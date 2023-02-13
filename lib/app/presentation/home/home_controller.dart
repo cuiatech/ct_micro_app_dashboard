@@ -6,43 +6,44 @@ import 'package:flut_micro_commons_dependencies/flut_micro_commons_dependencies.
 import 'package:flut_micro_commons_auth/app/domain/usecases/user_send_validation_email_usecase.dart';
 import 'package:flut_micro_commons_shared/flut_micro_commons_shared.dart';
 import 'package:flut_micro_commons_ds/flut_micro_commons_ds.dart';
+import 'package:flut_micro_commons_shared/shared/domain/models/dto/app_dto.dart';
 import 'package:flutter/material.dart';
 
 import '../../dashboard_routers.dart';
+import 'package:flut_micro_commons_core_app/app/domain/usecases/get_my_apps_usecase.dart';
 
 final $HomeController = Bind.singleton(
-  (i) => HomeController(i(), i()),
+  (i) => HomeController(i(), i(), i()),
 );
 
 class HomeController {
   HomeController(
     this._userCurrentUsecase,
     this._userSendValidationEmailUsecase,
+    this._getMyAppsUsecase,
   );
 
   final UserCurrentUsecase _userCurrentUsecase;
   final UserSendValidationEmailUsecase _userSendValidationEmailUsecase;
+  final GetMyAppsUsecase _getMyAppsUsecase;
 
   UserDto? userDto;
   List<Map<String, dynamic>> errors = [];
 
-  List<Map<String, dynamic>> apps = [
-    {
-      "title": "Syncro",
-      "description": "Síncronismo de produtos nos principais e-commerces",
-    },
-    {
-      "title": "eSaller",
-      "description": "Gerenciamento de vitrine online",
-    },
-    {
-      "title": "myDelivery",
-      "description": "Gerencie pedidos, entregadores e cozinha.",
-    },
-  ];
+  List<AppDto> apps = <AppDto>[];
 
   Future<void> getUser() async {
     userDto = (await _userCurrentUsecase()).data;
+  }
+
+  Future<List<AppDto>> getApps(BuildContext context) async {
+    var res = await _getMyAppsUsecase();
+
+    if (!res.success) {
+      CuiaToast.error(res.message ?? 'Error', context: context);
+    }
+
+    return apps = res.data;
   }
 
   void getErrors(BuildContext context) {

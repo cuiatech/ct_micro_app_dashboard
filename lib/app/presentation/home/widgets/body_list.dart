@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flut_micro_commons_ds/flut_micro_commons_ds.dart';
 import 'package:flut_micro_commons_shared/shared/domain/models/dto/app_dto.dart';
+import 'package:flut_micro_commons_dependencies/flut_micro_commons_dependencies.dart';
 
 class DashboardBodyList extends StatelessWidget {
   const DashboardBodyList({
@@ -47,7 +48,7 @@ class DashboardBodyList extends StatelessWidget {
             .map((e) => _item(
                   title: e.title,
                   description: e.description,
-                  onTap: () {},
+                  path: e.url,
                 ))
             .toList(),
       ),
@@ -57,8 +58,8 @@ class DashboardBodyList extends StatelessWidget {
   CuiaGridColumn _item({
     required String title,
     required String description,
+    required String path,
     String? urlImage,
-    Function()? onTap,
   }) {
     return CuiaGridColumn(
       xs: 6,
@@ -79,7 +80,9 @@ class DashboardBodyList extends StatelessWidget {
           color: Colors.white,
         ),
         child: InkWell(
-          onTap: onTap,
+          onTap: () {
+            Modular.to.pushNamed(path);
+          },
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,

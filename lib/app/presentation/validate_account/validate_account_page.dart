@@ -1,11 +1,11 @@
 // ignore_for_file: depend_on_referenced_packages, must_be_immutable
 
-import 'package:flut_micro_app_dashboard/app/dashboard_routers.dart';
-import 'package:flut_micro_app_dashboard/app/presentation/validate_account/validate_account_controller.dart';
+import 'package:ct_micro_app_dashboard/app/dashboard_routers.dart';
+import 'package:ct_micro_app_dashboard/app/presentation/validate_account/validate_account_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:flut_micro_commons_ds/flut_micro_commons_ds.dart';
-import 'package:flut_micro_app_help_center/app/presentation/help_center_widget/help_center_widget.dart';
-import 'package:flut_micro_commons_dependencies/flut_micro_commons_dependencies.dart';
+import 'package:ct_micro_commons_ds/ct_micro_commons_ds.dart';
+import 'package:ct_micro_app_help_center/app/presentation/help_center_widget/help_center_widget.dart';
+import 'package:ct_micro_commons_dependencies/ct_micro_commons_dependencies.dart';
 
 class ValidateAccountPage extends StatefulWidget {
   const ValidateAccountPage({

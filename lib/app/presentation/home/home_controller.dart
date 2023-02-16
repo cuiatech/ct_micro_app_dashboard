@@ -1,16 +1,16 @@
 // ignore_for_file: depend_on_referenced_packages, use_build_context_synchronously
 
-import 'package:flut_micro_commons_auth/app/domain/usecases/user_current_usecase.dart';
-import 'package:flut_micro_commons_auth/app/domain/models/dtos/user_dto_dto.dart';
-import 'package:flut_micro_commons_dependencies/flut_micro_commons_dependencies.dart';
-import 'package:flut_micro_commons_auth/app/domain/usecases/user_send_validation_email_usecase.dart';
-import 'package:flut_micro_commons_shared/flut_micro_commons_shared.dart';
-import 'package:flut_micro_commons_ds/flut_micro_commons_ds.dart';
-import 'package:flut_micro_commons_shared/shared/domain/models/dto/app_dto.dart';
+import 'package:ct_micro_commons_auth/app/domain/usecases/user_current_usecase.dart';
+import 'package:ct_micro_commons_auth/app/domain/models/dtos/user_dto_dto.dart';
+import 'package:ct_micro_commons_dependencies/ct_micro_commons_dependencies.dart';
+import 'package:ct_micro_commons_auth/app/domain/usecases/user_send_validation_email_usecase.dart';
+import 'package:ct_micro_commons_shared/ct_micro_commons_shared.dart';
+import 'package:ct_micro_commons_ds/ct_micro_commons_ds.dart';
+import 'package:ct_micro_commons_shared/shared/domain/models/dto/app_dto.dart';
 import 'package:flutter/material.dart';
 
 import '../../dashboard_routers.dart';
-import 'package:flut_micro_commons_core_app/app/domain/usecases/get_my_apps_usecase.dart';
+import 'package:ct_micro_commons_core_app/app/domain/usecases/get_my_apps_usecase.dart';
 
 final $HomeController = Bind.singleton(
   (i) => HomeController(i(), i(), i()),

@@ -1,8 +1,8 @@
 // ignore_for_file: depend_on_referenced_packages
 
 import 'package:flutter/material.dart';
-import 'package:flut_micro_commons_dependencies/flut_micro_commons_dependencies.dart';
-import 'package:flut_micro_commons_ds/flut_micro_commons_ds.dart';
+import 'package:ct_micro_commons_dependencies/ct_micro_commons_dependencies.dart';
+import 'package:ct_micro_commons_ds/ct_micro_commons_ds.dart';
 
 class DashboardBodyEmpty extends StatelessWidget {
   const DashboardBodyEmpty({
@@ -17,7 +17,7 @@ class DashboardBodyEmpty extends StatelessWidget {
         children: [
           Image.asset(
             '/assets/images/Opps.png',
-            package: 'flut_micro_commons_shared',
+            package: 'ct_micro_commons_shared',
             width: 350,
           ),
           const SizedBox(height: 9),

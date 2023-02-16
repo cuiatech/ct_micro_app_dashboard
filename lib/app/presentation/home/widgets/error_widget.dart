@@ -1,7 +1,7 @@
 // ignore_for_file: must_be_immutable, depend_on_referenced_packages, use_build_context_synchronously
 
 import 'package:flutter/material.dart';
-import 'package:flut_micro_commons_ds/flut_micro_commons_ds.dart';
+import 'package:ct_micro_commons_ds/ct_micro_commons_ds.dart';
 
 class ErrorMessageWidget extends StatefulWidget {
   const ErrorMessageWidget({

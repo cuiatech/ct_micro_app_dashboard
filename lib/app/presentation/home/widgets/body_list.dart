@@ -1,9 +1,9 @@
 // ignore_for_file: depend_on_referenced_packages
 
 import 'package:flutter/material.dart';
-import 'package:flut_micro_commons_ds/flut_micro_commons_ds.dart';
-import 'package:flut_micro_commons_shared/shared/domain/models/dto/app_dto.dart';
-import 'package:flut_micro_commons_dependencies/flut_micro_commons_dependencies.dart';
+import 'package:ct_micro_commons_ds/ct_micro_commons_ds.dart';
+import 'package:ct_micro_commons_shared/shared/domain/models/dto/app_dto.dart';
+import 'package:ct_micro_commons_dependencies/ct_micro_commons_dependencies.dart';
 
 class DashboardBodyList extends StatelessWidget {
   const DashboardBodyList({
@@ -90,7 +90,7 @@ class DashboardBodyList extends StatelessWidget {
               urlImage == null
                   ? Image.asset(
                       '/assets/images/system_page.png',
-                      package: 'flut_micro_commons_shared',
+                      package: 'ct_micro_commons_shared',
                     )
                   : Image.network(urlImage),
               const SizedBox(height: 8),

@@ -1,10 +1,10 @@
 // ignore_for_file: depend_on_referenced_packages
 
-import 'package:flut_micro_app_dashboard/app/dashboard_routers.dart';
-import 'package:flut_micro_app_dashboard/app/presentation/home/home_controller.dart';
-import 'package:flut_micro_app_dashboard/app/presentation/validate_account/validate_account_controller.dart';
-import 'package:flut_micro_app_dashboard/app/presentation/validate_account/validate_account_page.dart';
-import 'package:flut_micro_commons_dependencies/flut_micro_commons_dependencies.dart';
+import 'package:ct_micro_app_dashboard/app/dashboard_routers.dart';
+import 'package:ct_micro_app_dashboard/app/presentation/home/home_controller.dart';
+import 'package:ct_micro_app_dashboard/app/presentation/validate_account/validate_account_controller.dart';
+import 'package:ct_micro_app_dashboard/app/presentation/validate_account/validate_account_page.dart';
+import 'package:ct_micro_commons_dependencies/ct_micro_commons_dependencies.dart';
 
 import 'presentation/home/home_page.dart';
 

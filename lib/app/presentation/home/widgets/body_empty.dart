@@ -32,7 +32,7 @@ class DashboardBodyEmpty extends StatelessWidget {
           const SizedBox(height: 9),
           CuiaButtons.link(
             "home-page-body-empty-list-link".i18n(),
-            onTap: () {},
+            onTap: () => Modular.to.pushNamed("/store"),
           ),
         ],
       ),

@@ -7,7 +7,6 @@ import 'package:flutter/material.dart';
 import 'package:ct_micro_commons_ds/ct_micro_commons_ds.dart';
 import 'package:ct_micro_app_help_center/app/presentation/help_center_widget/help_center_widget.dart';
 import 'package:ct_micro_commons_dependencies/ct_micro_commons_dependencies.dart';
-import 'package:ct_micro_commons_shared/shared/domain/models/dto/app_dto.dart';
 
 import 'widgets/error_widget.dart';
 

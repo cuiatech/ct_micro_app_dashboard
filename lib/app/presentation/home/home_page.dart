@@ -23,11 +23,15 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) async {
-      await controller.getUser();
-      controller.getErrors(context);
-      setState(() {});
-    });
+    getData();
+  }
+
+  Future<void> getData() async {
+    setState(() => controller.loading = true);
+    await controller.getUser();
+    await controller.getMyApps();
+    controller.getErrors(context);
+    setState(() => controller.loading = false);
   }
 
   @override
@@ -46,29 +50,18 @@ class _HomePageState extends State<HomePage> {
                       ))
                   .toList(),
             ),
-            FutureBuilder(
-              future: controller.getApps(context),
-              builder: (_, snapshot) {
-                switch (snapshot.connectionState) {
-                  case ConnectionState.waiting:
-                    return Skeleton(
-                      isLoading: true,
-                      skeleton: SkeletonItem(
-                        child: DashboardBodyList.loading(12),
-                      ),
-                      child: Container(),
-                    );
-                  case ConnectionState.active:
-                  case ConnectionState.done:
-                    if (snapshot.hasData && snapshot.data!.isNotEmpty) {
-                      return DashboardBodyList(apps: controller.apps);
-                    }
-                    return const DashboardBodyEmpty();
-                  default:
-                    return const DashboardBodyEmpty();
-                }
-              },
-            ),
+            if (controller.loading)
+              Skeleton(
+                isLoading: controller.loading,
+                skeleton: SkeletonItem(
+                  child: DashboardBodyList.loading(12),
+                ),
+                child: Container(),
+              )
+            else if (controller.apps.isEmpty)
+              const DashboardBodyEmpty()
+            else
+              DashboardBodyList(apps: controller.apps)
           ],
         ),
       ),

@@ -27,6 +27,8 @@ class HomeController {
   final UserSendValidationEmailUsecase _userSendValidationEmailUsecase;
   final GetMyAppsUsecase _getMyAppsUsecase;
 
+  bool loading = false;
+
   UserDto? userDto;
   List<Map<String, dynamic>> errors = [];
 
@@ -36,13 +38,8 @@ class HomeController {
     userDto = (await _userCurrentUsecase()).data;
   }
 
-  Future<List<AppDto>> getApps(BuildContext context) async {
+  Future<List<AppDto>> getMyApps() async {
     var res = await _getMyAppsUsecase();
-
-    if (!res.success) {
-      CuiaToast.error(res.message ?? 'Error', context: context);
-    }
-
     return apps = res.data;
   }
 

@@ -6,7 +6,6 @@ import 'package:ct_micro_commons_dependencies/ct_micro_commons_dependencies.dart
 import 'package:ct_micro_commons_auth/app/domain/usecases/user_send_validation_email_usecase.dart';
 import 'package:ct_micro_commons_shared/ct_micro_commons_shared.dart';
 import 'package:ct_micro_commons_ds/ct_micro_commons_ds.dart';
-import 'package:ct_micro_commons_shared/shared/domain/models/dto/app_dto.dart';
 import 'package:flutter/material.dart';
 
 import '../../dashboard_routers.dart';

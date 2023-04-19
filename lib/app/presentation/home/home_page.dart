@@ -1,5 +1,3 @@
-// ignore_for_file: depend_on_referenced_packages, must_be_immutable, use_build_context_synchronously
-
 import 'package:ct_micro_app_dashboard/app/presentation/home/home_controller.dart';
 import 'package:ct_micro_app_dashboard/app/presentation/home/widgets/body_empty.dart';
 import 'package:ct_micro_app_dashboard/app/presentation/home/widgets/body_list.dart';

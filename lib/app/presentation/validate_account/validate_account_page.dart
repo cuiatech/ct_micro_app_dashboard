@@ -1,5 +1,3 @@
-// ignore_for_file: depend_on_referenced_packages, must_be_immutable
-
 import 'package:ct_micro_app_dashboard/app/dashboard_routers.dart';
 import 'package:ct_micro_app_dashboard/app/presentation/validate_account/validate_account_controller.dart';
 import 'package:flutter/material.dart';

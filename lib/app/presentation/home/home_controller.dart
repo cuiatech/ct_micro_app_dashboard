@@ -1,5 +1,3 @@
-// ignore_for_file: depend_on_referenced_packages, use_build_context_synchronously
-
 import 'package:ct_micro_commons_auth/app/domain/usecases/user_current_usecase.dart';
 import 'package:ct_micro_commons_auth/app/domain/models/dtos/user_dto_dto.dart';
 import 'package:ct_micro_commons_dependencies/ct_micro_commons_dependencies.dart';
